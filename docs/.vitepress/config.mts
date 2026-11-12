@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: process.env.VITEPRESS_BASE || '/',
   srcDir: "files",
 
   title: "Stellar Wallets Kit",
