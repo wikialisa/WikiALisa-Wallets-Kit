@@ -10,9 +10,9 @@ If you're using a framework that does not support polyfills then you might need 
 To import and include the module you can do it like this:
 
 ```typescript
-import { StellarWalletsKit } from '@creit-tech/stellar-wallets-kit/sdk'
-import { defaultModules } from '@creit-tech/stellar-wallets-kit/modules/utils';
-import { TrezorModule } from "@creit-tech/stellar-wallets-kit/modules/trezor";
+import { StellarWalletsKit } from '@wikialisa-master/WikiALisa-Wallets-Kit/sdk'
+import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
+import { TrezorModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/trezor";
 
 StellarWalletsKit.init({
   modules: [

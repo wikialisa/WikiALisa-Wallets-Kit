@@ -1,21 +1,21 @@
 import "./app.css";
 import preactLogo from "./assets/preact.svg";
-import { SwkAppDarkTheme } from "@creit-tech/stellar-wallets-kit";
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
+import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit";
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 import {
   activeAddress,
   activeModule,
-} from "@creit-tech/stellar-wallets-kit/state";
-import { SwkButton } from "@creit-tech/stellar-wallets-kit/components";
-import { AlbedoModule } from "@creit-tech/stellar-wallets-kit/modules/albedo";
-import { FreighterModule } from "@creit-tech/stellar-wallets-kit/modules/freighter";
-import { HanaModule } from "@creit-tech/stellar-wallets-kit/modules/hana";
-import { LedgerModule } from "@creit-tech/stellar-wallets-kit/modules/ledger";
-import { LobstrModule } from "@creit-tech/stellar-wallets-kit/modules/lobstr";
-import { RabetModule } from "@creit-tech/stellar-wallets-kit/modules/rabet";
-import { TrezorModule } from "@creit-tech/stellar-wallets-kit/modules/trezor";
-import { xBullModule } from "@creit-tech/stellar-wallets-kit/modules/xbull";
-import { WalletConnectModule } from "@creit-tech/stellar-wallets-kit/modules/wallet-connect";
+} from "@wikialisa-master/WikiALisa-Wallets-Kit/state";
+import { SwkButton } from "@wikialisa-master/WikiALisa-Wallets-Kit/components";
+import { AlbedoModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/albedo";
+import { FreighterModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/freighter";
+import { HanaModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/hana";
+import { LedgerModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/ledger";
+import { LobstrModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/lobstr";
+import { RabetModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/rabet";
+import { TrezorModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/trezor";
+import { xBullModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/xbull";
+import { WalletConnectModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/wallet-connect";
 
 import {
   Account,

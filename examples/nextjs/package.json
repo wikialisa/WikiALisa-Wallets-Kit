@@ -9,7 +9,7 @@
     "lint": "eslint"
   },
   "dependencies": {
-    "@creit-tech/stellar-wallets-kit": "jsr:^2.5.0",
+    "@wikialisa-master/WikiALisa-Wallets-Kit": "jsr:^2.5.0",
     "next": "16.2.11",
     "react": "19.2.3",
     "react-dom": "19.2.3"

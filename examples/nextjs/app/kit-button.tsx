@@ -1,9 +1,9 @@
 import { useEffect } from "react";
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
-import { SwkAppDarkTheme } from "@creit-tech/stellar-wallets-kit/types";
-import { defaultModules } from "@creit-tech/stellar-wallets-kit/modules/utils";
-import { KitEventType } from "@creit-tech/stellar-wallets-kit/types";
-import { ButtonMode } from "@creit-tech/stellar-wallets-kit/components";
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
+import { defaultModules } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils";
+import { KitEventType } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
+import { ButtonMode } from "@wikialisa-master/WikiALisa-Wallets-Kit/components";
 
 StellarWalletsKit.init({
   theme: SwkAppDarkTheme,

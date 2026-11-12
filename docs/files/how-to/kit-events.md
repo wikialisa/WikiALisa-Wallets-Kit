@@ -4,7 +4,7 @@ You can listen to updates from the kit, like for example if the user has disconn
 address or picked another wallet. To do that, use the `on` method of the kit like this:
 
 ```typescript
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 
 const sub = StellarWalletsKit.on(KitEventType.STATE_UPDATED, event => {
   console.log(`Address updated:`, event.payload.address);

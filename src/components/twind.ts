@@ -56,17 +56,17 @@ export const injectGlobal = injectGlobal$.bind(_tw);
 export const keyframes = keyframes$.bind(_tw);
 
 export const reset: string = css`
-  .stellar-wallets-kit *,
-  .stellar-wallets-kit ::after,
-  .stellar-wallets-kit ::before,
-  .stellar-wallets-kit ::backdrop,
-  .stellar-wallets-kit ::file-selector-button {
+  .WikiALisa-Wallets-Kit *,
+  .WikiALisa-Wallets-Kit ::after,
+  .WikiALisa-Wallets-Kit ::before,
+  .WikiALisa-Wallets-Kit ::backdrop,
+  .WikiALisa-Wallets-Kit ::file-selector-button {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
     border: 0 solid;
   }
-  .stellar-wallets-kit :host {
+  .WikiALisa-Wallets-Kit :host {
     line-height: 1.5;
     -webkit-text-size-adjust: 100%;
     tab-size: 4;
@@ -77,99 +77,99 @@ export const reset: string = css`
     font-variation-settings: normal;
     -webkit-tap-highlight-color: transparent;
   }
-  .stellar-wallets-kit hr {
+  .WikiALisa-Wallets-Kit hr {
     height: 0;
     color: inherit;
     border-top-width: 1px;
   }
-  .stellar-wallets-kit abbr:where([title]) {
+  .WikiALisa-Wallets-Kit abbr:where([title]) {
     -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
   }
-  .stellar-wallets-kit h1,
-  .stellar-wallets-kit h2,
-  .stellar-wallets-kit h3,
-  .stellar-wallets-kit h4,
-  .stellar-wallets-kit h5,
-  .stellar-wallets-kit h6 {
+  .WikiALisa-Wallets-Kit h1,
+  .WikiALisa-Wallets-Kit h2,
+  .WikiALisa-Wallets-Kit h3,
+  .WikiALisa-Wallets-Kit h4,
+  .WikiALisa-Wallets-Kit h5,
+  .WikiALisa-Wallets-Kit h6 {
     font-size: inherit;
     font-weight: inherit;
   }
-  .stellar-wallets-kit a {
+  .WikiALisa-Wallets-Kit a {
     color: inherit;
     -webkit-text-decoration: inherit;
     text-decoration: inherit;
   }
-  .stellar-wallets-kit b,
-  .stellar-wallets-kit strong {
+  .WikiALisa-Wallets-Kit b,
+  .WikiALisa-Wallets-Kit strong {
     font-weight: bolder;
   }
-  .stellar-wallets-kit code,
-  .stellar-wallets-kit kbd,
-  .stellar-wallets-kit samp,
-  .stellar-wallets-kit pre {
+  .WikiALisa-Wallets-Kit code,
+  .WikiALisa-Wallets-Kit kbd,
+  .WikiALisa-Wallets-Kit samp,
+  .WikiALisa-Wallets-Kit pre {
     font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
     font-feature-settings: normal;
     font-variation-settings: normal;
     font-size: 1em;
   }
-  .stellar-wallets-kit small {
+  .WikiALisa-Wallets-Kit small {
     font-size: 80%;
   }
-  .stellar-wallets-kit sub,
-  .stellar-wallets-kit sup {
+  .WikiALisa-Wallets-Kit sub,
+  .WikiALisa-Wallets-Kit sup {
     font-size: 75%;
     line-height: 0;
     position: relative;
     vertical-align: baseline;
   }
-  .stellar-wallets-kit sub {
+  .WikiALisa-Wallets-Kit sub {
     bottom: -0.25em;
   }
-  .stellar-wallets-kit sup {
+  .WikiALisa-Wallets-Kit sup {
     top: -0.5em;
   }
-  .stellar-wallets-kit table {
+  .WikiALisa-Wallets-Kit table {
     text-indent: 0;
     border-color: inherit;
     border-collapse: collapse;
   }
-  .stellar-wallets-kit :-moz-focusring {
+  .WikiALisa-Wallets-Kit :-moz-focusring {
     outline: auto;
   }
-  .stellar-wallets-kit progress {
+  .WikiALisa-Wallets-Kit progress {
     vertical-align: baseline;
   }
-  .stellar-wallets-kit summary {
+  .WikiALisa-Wallets-Kit summary {
     display: list-item;
   }
-  .stellar-wallets-kit ol,
-  .stellar-wallets-kit ul,
-  .stellar-wallets-kit menu {
+  .WikiALisa-Wallets-Kit ol,
+  .WikiALisa-Wallets-Kit ul,
+  .WikiALisa-Wallets-Kit menu {
     list-style: none;
   }
-  .stellar-wallets-kit img,
-  .stellar-wallets-kit svg,
-  .stellar-wallets-kit video,
-  .stellar-wallets-kit canvas,
-  .stellar-wallets-kit audio,
-  .stellar-wallets-kit iframe,
-  .stellar-wallets-kit embed,
-  .stellar-wallets-kit object {
+  .WikiALisa-Wallets-Kit img,
+  .WikiALisa-Wallets-Kit svg,
+  .WikiALisa-Wallets-Kit video,
+  .WikiALisa-Wallets-Kit canvas,
+  .WikiALisa-Wallets-Kit audio,
+  .WikiALisa-Wallets-Kit iframe,
+  .WikiALisa-Wallets-Kit embed,
+  .WikiALisa-Wallets-Kit object {
     display: block;
     vertical-align: middle;
   }
-  .stellar-wallets-kit img,
-  .stellar-wallets-kit video {
+  .WikiALisa-Wallets-Kit img,
+  .WikiALisa-Wallets-Kit video {
     max-width: 100%;
     height: auto;
   }
-  .stellar-wallets-kit button,
-  .stellar-wallets-kit input,
-  .stellar-wallets-kit select,
-  .stellar-wallets-kit optgroup,
-  .stellar-wallets-kit textarea,
-  .stellar-wallets-kit ::file-selector-button {
+  .WikiALisa-Wallets-Kit button,
+  .WikiALisa-Wallets-Kit input,
+  .WikiALisa-Wallets-Kit select,
+  .WikiALisa-Wallets-Kit optgroup,
+  .WikiALisa-Wallets-Kit textarea,
+  .WikiALisa-Wallets-Kit ::file-selector-button {
     font: inherit;
     font-feature-settings: inherit;
     font-variation-settings: inherit;
@@ -179,61 +179,61 @@ export const reset: string = css`
     background-color: transparent;
     opacity: 1;
   }
-  .stellar-wallets-kit :where(select:is([multiple], [size])) optgroup {
+  .WikiALisa-Wallets-Kit :where(select:is([multiple], [size])) optgroup {
     font-weight: bolder;
   }
-  .stellar-wallets-kit :where(select:is([multiple], [size])) optgroup option {
+  .WikiALisa-Wallets-Kit :where(select:is([multiple], [size])) optgroup option {
     padding-inline-start: 20px;
   }
-  .stellar-wallets-kit ::file-selector-button {
+  .WikiALisa-Wallets-Kit ::file-selector-button {
     margin-inline-end: 4px;
   }
-  .stellar-wallets-kit ::placeholder {
+  .WikiALisa-Wallets-Kit ::placeholder {
     opacity: 1;
   }
-  .stellar-wallets-kit textarea {
+  .WikiALisa-Wallets-Kit textarea {
     resize: vertical;
   }
-  .stellar-wallets-kit ::-webkit-search-decoration {
+  .WikiALisa-Wallets-Kit ::-webkit-search-decoration {
     -webkit-appearance: none;
   }
-  .stellar-wallets-kit ::-webkit-date-and-time-value {
+  .WikiALisa-Wallets-Kit ::-webkit-date-and-time-value {
     min-height: 1lh;
     text-align: inherit;
   }
-  .stellar-wallets-kit ::-webkit-datetime-edit {
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit {
     display: inline-flex;
   }
-  .stellar-wallets-kit ::-webkit-datetime-edit-fields-wrapper {
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-fields-wrapper {
     padding: 0;
   }
-  .stellar-wallets-kit ::-webkit-datetime-edit,
-  .stellar-wallets-kit ::-webkit-datetime-edit-year-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-month-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-day-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-hour-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-minute-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-second-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-millisecond-field,
-  .stellar-wallets-kit ::-webkit-datetime-edit-meridiem-field {
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-year-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-month-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-day-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-hour-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-minute-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-second-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-millisecond-field,
+  .WikiALisa-Wallets-Kit ::-webkit-datetime-edit-meridiem-field {
     padding-block: 0;
   }
-  .stellar-wallets-kit ::-webkit-calendar-picker-indicator {
+  .WikiALisa-Wallets-Kit ::-webkit-calendar-picker-indicator {
     line-height: 1;
   }
-  .stellar-wallets-kit :-moz-ui-invalid {
+  .WikiALisa-Wallets-Kit :-moz-ui-invalid {
     box-shadow: none;
   }
-  .stellar-wallets-kit button,
-  .stellar-wallets-kit input:where([type="button"], [type="reset"], [type="submit"]),
-  .stellar-wallets-kit ::file-selector-button {
+  .WikiALisa-Wallets-Kit button,
+  .WikiALisa-Wallets-Kit input:where([type="button"], [type="reset"], [type="submit"]),
+  .WikiALisa-Wallets-Kit ::file-selector-button {
     appearance: button;
   }
-  .stellar-wallets-kit ::-webkit-inner-spin-button,
-  .stellar-wallets-kit ::-webkit-outer-spin-button {
+  .WikiALisa-Wallets-Kit ::-webkit-inner-spin-button,
+  .WikiALisa-Wallets-Kit ::-webkit-outer-spin-button {
     height: auto;
   }
-  .stellar-wallets-kit [hidden]:where(:not([hidden="until-found"])) {
+  .WikiALisa-Wallets-Kit [hidden]:where(:not([hidden="until-found"])) {
     display: none !important;
   }
 `;

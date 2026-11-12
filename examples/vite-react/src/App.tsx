@@ -4,17 +4,17 @@ import "./App.css";
 import {
   KitEventType,
   SwkAppDarkTheme,
-} from "@creit.tech/stellar-wallets-kit/types";
-import { StellarWalletsKit } from "@creit.tech/stellar-wallets-kit/sdk";
+} from "@creit.tech/WikiALisa-Wallets-Kit/types";
+import { StellarWalletsKit } from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
 import {
   activeAddress,
   activeModule,
-} from "@creit.tech/stellar-wallets-kit/state";
-import { ButtonMode } from "@creit.tech/stellar-wallets-kit/components";
-import { defaultModules } from "@creit.tech/stellar-wallets-kit/modules/utils";
-import { TrezorModule } from "@creit.tech/stellar-wallets-kit/modules/trezor";
-import { LedgerModule } from "@creit.tech/stellar-wallets-kit/modules/ledger";
-import { WalletConnectModule } from "@creit.tech/stellar-wallets-kit/modules/wallet-connect";
+} from "@creit.tech/WikiALisa-Wallets-Kit/state";
+import { ButtonMode } from "@creit.tech/WikiALisa-Wallets-Kit/components";
+import { defaultModules } from "@creit.tech/WikiALisa-Wallets-Kit/modules/utils";
+import { TrezorModule } from "@creit.tech/WikiALisa-Wallets-Kit/modules/trezor";
+import { LedgerModule } from "@creit.tech/WikiALisa-Wallets-Kit/modules/ledger";
+import { WalletConnectModule } from "@creit.tech/WikiALisa-Wallets-Kit/modules/wallet-connect";
 
 import {
   Account,

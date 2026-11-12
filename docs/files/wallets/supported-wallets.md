@@ -25,7 +25,7 @@ All wallets modules are exported at the `/modules` path so you can add the walle
 there. Here is an example for importing xBull Wallet's module:
 
 ```typescript
-import {xBullModule} from "@creit-tech/stellar-wallets-kit/modules/xbull";
+import {xBullModule} from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/xbull";
 ```
 
 ## What is a default wallet?
@@ -34,7 +34,7 @@ Default wallets are all wallets included in the `default list`, this list includ
 any extra configuration or dependency. You can import all the wallets in this list like this:
 
 ```typescript
-import {defaultModules} from '@creit-tech/stellar-wallets-kit/modules/utils';
+import {defaultModules} from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 ```
 
 You can see the difference for the developer using the kit between wallets being or not in the default

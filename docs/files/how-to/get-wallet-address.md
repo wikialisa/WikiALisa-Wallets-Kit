@@ -3,7 +3,7 @@
 To get the current active address you can do it with:
 
 ```typescript
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 
 const {address} = await StellarWalletsKit.getAddress();
 ```

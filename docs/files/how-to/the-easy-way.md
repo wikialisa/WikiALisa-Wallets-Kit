@@ -10,9 +10,9 @@ site uses SSR or has a pre-rendering process, then skip starting the kit until y
 know, you can start it. Do it like this:
 
 ```typescript
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
-import { SwkAppDarkTheme } from "@creit-tech/stellar-wallets-kit/types";
-import { defaultModules } from '@creit-tech/stellar-wallets-kit/modules/utils';
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
+import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
 StellarWalletsKit.init({
   theme: SwkAppDarkTheme,
@@ -44,7 +44,7 @@ Or if you prefer to, you can also just remove all the styles from the button so 
 its appearance like this:
 
 ```typescript
-import { ButtonMode } from '@creit-tech/stellar-wallets-kit/components';
+import { ButtonMode } from '@wikialisa-master/WikiALisa-Wallets-Kit/components';
 
 StellarWalletsKit.createButton(buttonWrapper, {
   mode: ButtonMode.free,
@@ -59,7 +59,7 @@ will send every time something happens. This way, when the user has connected th
 website's logic
 
 ```typescript
-import { KitEventType } from "@creit-tech/stellar-wallets-kit/types";
+import { KitEventType } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
 const sub1 = StellarWalletsKit.on(KitEventType.STATE_UPDATED, event => {
   // We update our website's logic with the new address: event.payload.address

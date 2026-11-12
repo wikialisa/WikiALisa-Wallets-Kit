@@ -127,7 +127,7 @@ await build({
   },
   test: false,
   package: {
-    name: denoFile.name.replace("@creit-tech", "@creit.tech"),
+    name: denoFile.name.replace("@wikialisa-master", "@creit.tech"),
     version: denoFile.version,
     description: "A kit to handle all Stellar Wallets at once",
     author: {
@@ -137,7 +137,7 @@ await build({
     license: denoFile.license,
     repository: {
       type: "git",
-      url: "https://github.com/Creit-Tech/Stellar-Wallets-Kit.git",
+      url: "https://github.com/wikialisa-master/WikiALisa-Wallets-Kit.git",
     },
     keywords: [
       "Stellar",

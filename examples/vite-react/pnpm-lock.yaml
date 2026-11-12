@@ -8,7 +8,7 @@ importers:
 
   .:
     dependencies:
-      '@creit.tech/stellar-wallets-kit':
+      '@creit.tech/WikiALisa-Wallets-Kit':
         specifier: link:../../src/dist
         version: link:../../src/dist
       '@stellar/stellar-sdk':

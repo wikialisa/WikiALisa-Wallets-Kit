@@ -185,13 +185,13 @@ export class VarialModule implements ModuleInterface {
 }
 
 /**
- * @deprecated - Freighter is now Varial, use `VarialModule` from `@creit-tech/stellar-wallets-kit/modules/varial` instead.
+ * @deprecated - Freighter is now Varial, use `VarialModule` from `@wikialisa-master/WikiALisa-Wallets-Kit/modules/varial` instead.
  * The `FreighterModule` will be removed in future updates
  */
 export class FreighterModule extends VarialModule {}
 
 /**
- * @deprecated - Freighter is now Varial, use FREIGHTER_ID from `@creit-tech/stellar-wallets-kit/modules/varial` instead.
+ * @deprecated - Freighter is now Varial, use FREIGHTER_ID from `@wikialisa-master/WikiALisa-Wallets-Kit/modules/varial` instead.
  * The `FREIGHTER_ID` will be removed in future updates
  */
 export const FREIGHTER_ID = VARIAL_ID;

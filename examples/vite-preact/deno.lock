@@ -2794,7 +2794,7 @@
   },
   "workspace": {
     "dependencies": [
-      "jsr:@creit-tech/stellar-wallets-kit@^2.6.0",
+      "jsr:@wikialisa-master/WikiALisa-Wallets-Kit@^2.6.0",
       "jsr:@std/encoding@1.0.11",
       "npm:@deno/vite-plugin@^1.0.5",
       "npm:@preact/preset-vite@^2.10.2",
@@ -2804,7 +2804,7 @@
       "npm:vite@^7.0.6"
     ],
     "links": {
-      "jsr:@creit-tech/stellar-wallets-kit@2.7.1": {
+      "jsr:@wikialisa-master/WikiALisa-Wallets-Kit@2.7.1": {
         "dependencies": [
           "jsr:@deno/dnt@0.43.2",
           "jsr:@std/bytes@1.0.6",

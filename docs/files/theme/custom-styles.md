@@ -28,7 +28,7 @@ So you can define your own and provide it to the kit, or you could also just imp
 values you want to. Here is an example of how you could do it:
 
 ```typescript
-import { SwkAppDarkTheme } from "@creit-tech/stellar-wallets-kit/types";
+import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
 StellarWalletsKit.init({
   theme: {

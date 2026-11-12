@@ -8,9 +8,9 @@ importers:
 
   .:
     dependencies:
-      '@creit-tech/stellar-wallets-kit':
+      '@wikialisa-master/WikiALisa-Wallets-Kit':
         specifier: jsr:^2.5.0
-        version: '@jsr/creit-tech__stellar-wallets-kit@2.5.0(@trezor/connect@9.7.3(@solana/sysvars@2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(ws@8.21.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)))(@types/react@19.2.18)(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(near-api-js@5.1.1)(react@19.2.3)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)'
+        version: '@jsr/wikialisa-master__WikiALisa-Wallets-Kit@2.5.0(@trezor/connect@9.7.3(@solana/sysvars@2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(ws@8.21.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)))(@types/react@19.2.18)(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(near-api-js@5.1.1)(react@19.2.3)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)'
       next:
         specifier: 16.2.11
         version: 16.2.11(@babel/core@7.29.7(supports-color@7.2.0))(react-dom@19.2.3(react@19.2.3))(react@19.2.3)
@@ -424,8 +424,8 @@ packages:
   '@jridgewell/trace-mapping@0.3.31':
     resolution: {integrity: sha512-zzNR+SdQSDJzc8joaeP8QQoCQr8NuYx2dIIytl1QeBEZHJ9uW6hebsrYgbz8hJwUQao3TWCMtmfV8Nu1twOLAw==}
 
-  '@jsr/creit-tech__stellar-wallets-kit@2.5.0':
-    resolution: {integrity: sha512-UFIXW5frS1c6yACuAQyORGz9SBcqmyczsQvxjcaZknHGgG+tSwMwxnUo2hspeNnrvMZDoTZo54t3WKMMiZ3mtA==, tarball: https://npm.jsr.io/~/11/@jsr/creit-tech__stellar-wallets-kit/2.5.0.tgz}
+  '@jsr/wikialisa-master__WikiALisa-Wallets-Kit@2.5.0':
+    resolution: {integrity: sha512-UFIXW5frS1c6yACuAQyORGz9SBcqmyczsQvxjcaZknHGgG+tSwMwxnUo2hspeNnrvMZDoTZo54t3WKMMiZ3mtA==, tarball: https://npm.jsr.io/~/11/@jsr/wikialisa-master__WikiALisa-Wallets-Kit/2.5.0.tgz}
 
   '@jsr/std__encoding@1.0.10':
     resolution: {integrity: sha512-WK2njnDTyKefroRNk2Ooq7GStp6Y0ccAvr4To+Z/zecRAGe7+OSvH9DbiaHpAKwEi2KQbmpWMOYsdNt+TsdmSw==, tarball: https://npm.jsr.io/~/11/@jsr/std__encoding/1.0.10.tgz}
@@ -4814,7 +4814,7 @@ snapshots:
       '@jridgewell/resolve-uri': 3.1.2
       '@jridgewell/sourcemap-codec': 1.5.5
 
-  '@jsr/creit-tech__stellar-wallets-kit@2.5.0(@trezor/connect@9.7.3(@solana/sysvars@2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(ws@8.21.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)))(@types/react@19.2.18)(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(near-api-js@5.1.1)(react@19.2.3)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)':
+  '@jsr/wikialisa-master__WikiALisa-Wallets-Kit@2.5.0(@trezor/connect@9.7.3(@solana/sysvars@2.3.0(fastestsmallesttextencoderdecoder@1.0.22)(typescript@5.9.3))(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(ws@8.21.0(bufferutil@4.1.0)(utf-8-validate@6.0.6)))(@types/react@19.2.18)(bufferutil@4.1.0)(debug@4.4.3(supports-color@7.2.0))(fastestsmallesttextencoderdecoder@1.0.22)(near-api-js@5.1.1)(react@19.2.3)(supports-color@7.2.0)(tslib@2.8.1)(typescript@5.9.3)(utf-8-validate@6.0.6)(zod@3.25.76)':
     dependencies:
       '@albedo-link/intent': 0.12.0
       '@creit.tech/xbull-wallet-connect': 0.4.0

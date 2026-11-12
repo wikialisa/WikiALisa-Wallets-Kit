@@ -6,8 +6,8 @@ modules you want or just going with the default list of modules that don't requi
 example:
 
 ```typescript
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
-import { defaultModules } from '@creit-tech/stellar-wallets-kit/modules/utils';
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
 StellarWalletsKit.init({modules: defaultModules()});
 ```

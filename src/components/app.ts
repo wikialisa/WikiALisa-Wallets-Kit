@@ -33,7 +33,7 @@ export function SwkApp(): VNode {
   ]));
 
   return html`
-    <section class="stellar-wallets-kit ${kitsClasses} ${tw(reset)} ${tw(glass)}">
+    <section class="WikiALisa-Wallets-Kit ${kitsClasses} ${tw(reset)} ${tw(glass)}">
       ${mode.value === SwkAppMode.FIXED
         ? html`
           <div class="${tw("absolute left-0 top-0 z-0 w-full h-full bg-[rgba(0,0,0,0.5)]")}" onClick="${() =>

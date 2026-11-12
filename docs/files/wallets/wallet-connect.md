@@ -3,9 +3,9 @@
 To import and include the module you can do it like this:
 
 ```typescript
-import { StellarWalletsKit } from '@creit-tech/stellar-wallets-kit/sdk'
-import { defaultModules } from '@creit-tech/stellar-wallets-kit/modules/utils';
-import { WalletConnectModule } from "@creit-tech/stellar-wallets-kit/modules/wallet-connect";
+import { StellarWalletsKit } from '@wikialisa-master/WikiALisa-Wallets-Kit/sdk'
+import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
+import { WalletConnectModule } from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/wallet-connect";
 
 StellarWalletsKit.init({
   modules: [

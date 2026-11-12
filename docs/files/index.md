@@ -36,14 +36,14 @@ Here are the steps to install, start and sign a transaction with our kit:
 ### Install the package
 
 ```shell
-npx jsr add @creit-tech/stellar-wallets-kit
+npx jsr add @wikialisa-master/WikiALisa-Wallets-Kit
 ```
 
 ### Start the kit
 
 ```typescript
-import { StellarWalletsKit } from "@creit-tech/stellar-wallets-kit/sdk";
-import { defaultModules } from '@creit-tech/stellar-wallets-kit/modules/utils';
+import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
 StellarWalletsKit.init({modules: defaultModules()});
 ```

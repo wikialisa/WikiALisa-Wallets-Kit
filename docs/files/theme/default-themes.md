@@ -3,7 +3,7 @@
 The kit includes two default themes one for `light` and one for `dark` styles and can be imported and defined like this:
 
 ```typescript
-import { SwkAppDarkTheme } from "@creit-tech/stellar-wallets-kit/types";
+import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
 StellarWalletsKit.init({theme: SwkAppDarkTheme});
 ```

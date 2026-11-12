@@ -10,7 +10,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@creit.tech/stellar-wallets-kit": "link:../../src/dist",
+    "@creit.tech/WikiALisa-Wallets-Kit": "link:../../src/dist",
     "@stellar/stellar-sdk": "17.0.0",
     "buffer": "6.0.3",
     "react": "19.1.1",

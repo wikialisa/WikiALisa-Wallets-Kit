@@ -61,7 +61,7 @@ export default defineConfig({
     ],
 
     socialLinks: [
-      {icon: 'github', link: 'https://github.com/Creit-Tech/Stellar-Wallets-Kit'}
+      {icon: 'github', link: 'https://github.com/wikialisa-master/WikiALisa-Wallets-Kit'}
     ]
   }
 })

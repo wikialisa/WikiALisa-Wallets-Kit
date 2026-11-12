@@ -1,15 +1,15 @@
-import {SwkAppDarkTheme} from "@creit.tech/stellar-wallets-kit/types";
-import {StellarWalletsKit} from "@creit.tech/stellar-wallets-kit/sdk";
+import {SwkAppDarkTheme} from "@creit.tech/WikiALisa-Wallets-Kit/types";
+import {StellarWalletsKit} from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
 import {
     activeAddress,
     activeModule,
-} from "@creit.tech/stellar-wallets-kit/state";
-import {AlbedoModule} from "@creit.tech/stellar-wallets-kit/modules/albedo";
-import {FreighterModule} from "@creit.tech/stellar-wallets-kit/modules/freighter";
-import {HanaModule} from "@creit.tech/stellar-wallets-kit/modules/hana";
-import {LobstrModule} from "@creit.tech/stellar-wallets-kit/modules/lobstr";
-import {RabetModule} from "@creit.tech/stellar-wallets-kit/modules/rabet";
-import {xBullModule} from "@creit.tech/stellar-wallets-kit/modules/xbull";
+} from "@creit.tech/WikiALisa-Wallets-Kit/state";
+import {AlbedoModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/albedo";
+import {FreighterModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/freighter";
+import {HanaModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/hana";
+import {LobstrModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/lobstr";
+import {RabetModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/rabet";
+import {xBullModule} from "@creit.tech/WikiALisa-Wallets-Kit/modules/xbull";
 
 import {
     Account,
