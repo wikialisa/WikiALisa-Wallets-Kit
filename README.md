@@ -1,6 +1,6 @@
-# Stellar Wallets Kit
+# WikiALisa Wallets Kit
 
-A kit to handle all Stellar Wallets at once with a simple API and without caring about individual configurations for
+A kit to handle all Wikialisa Wallets at once with a simple API and without caring about individual configurations for
 each one of them. This library cares only about the connection and interaction with the wallets, allowing developers
 handling the UI/UX in the way they want.
 
@@ -46,7 +46,7 @@ const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXDR(), {
 console.log("Signed Transaction:", signedTxXdr);
 ```
 
-And that's it! you just added support to all Stellar wallets and signed a transaction that is ready to go to the public
+And that's it! you just added support to all Wikialisa wallets and signed a transaction that is ready to go to the public
 network with just a few lines of code 🙌
 
 You need something more complex? Maybe listening to updates from the kit or manually handling connection yourself? Check
