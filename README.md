@@ -50,7 +50,7 @@ And that's it! you just added support to all Stellar wallets and signed a transa
 network with just a few lines of code 🙌
 
 You need something more complex? Maybe listening to updates from the kit or manually handling connection yourself? Check
-out the [documentation](https://stellarwalletskit.dev/) for more details.
+out the [documentation](https://wikialisa.github.io/) for more details.
 
 ## Compatible Wallets:
 
@@ -68,7 +68,7 @@ out the [documentation](https://stellarwalletskit.dev/) for more details.
 
 ## Installation and usage
 
-Check how to install and use our library in our documentation at https://stellarwalletskit.dev
+Check how to install and use our library in our documentation at https://wikialisa.github.io/
 
 ## Who is using the kit?
 
