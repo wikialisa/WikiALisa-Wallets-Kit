@@ -12,9 +12,9 @@ To do this, you need to show the user the "authentication modal" where the user 
 connect. You will get the active address from the wallet after it selects the option. You can do it like this:
 
 ```typescript
-import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 
-const {address} = await StellarWalletsKit.authModal();
+const {address} = await WikialisaWalletsKit.authModal();
 ```
 
 After the user has picked the wallet and you have received the address, the kit will keep it until the user calls the

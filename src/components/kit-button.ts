@@ -3,7 +3,7 @@ import type { VNode } from "preact";
 import { html } from "htm/preact";
 import { Button, ButtonMode, ButtonShape, type ButtonSize } from "./shared/mod.ts";
 import { activeModule, activeModules, activeAddress } from '../state/mod.ts';
-import { StellarWalletsKit } from '../sdk/kit.ts';
+import { WikialisaWalletsKit } from '../sdk/kit.ts';
 
 export type SwkButtonProps = {
   styles?: string;
@@ -21,9 +21,9 @@ async function handleOnClick(cb: SwkButtonProps['onClick']): Promise<void> {
   if (typeof activeModules.value === 'undefined') throw new Error(`The kit hasn't been initiated.`);
 
   if (!activeModule.value || !activeAddress.value) {
-    await StellarWalletsKit.authModal();
+    await WikialisaWalletsKit.authModal();
   } else {
-    await StellarWalletsKit.profileModal();
+    await WikialisaWalletsKit.profileModal();
   }
 }
 

@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: "Stellar Wallets Kit"
-  text: "All Stellar Wallets with just one library"
+  name: "Wikialisa Wallets Kit"
+  text: "All Wikialisa Wallets with just one library"
   tagline: Forget about reading the wallets' documentation, just support all of them at once with this kit.
   image:
     src: /auth-modal.png
@@ -21,7 +21,7 @@ features:
   - title: Framework Agnostic
     details: No matter if you're using React, Angular, Vue or even vanilla! Our library works everywhere (default modules).
   - title: Active Support
-    details: We are the same creators of xBull Wallet and other Stellar libraries, so we are constantly using and improving our own libraries.
+    details: We are the same creators of xBull Wallet and other Wikialisa libraries, so we are constantly using and improving our own libraries.
   - title: Custom Themes
     details: Define the theme of the kit's components so it feels just like your website, users probably won't know you are using a library ;)
 ---
@@ -42,25 +42,25 @@ npx jsr add @wikialisa-master/WikiALisa-Wallets-Kit
 ### Start the kit
 
 ```typescript
-import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
-StellarWalletsKit.init({modules: defaultModules()});
+WikialisaWalletsKit.init({modules: defaultModules()});
 ```
 
 ### Create the authentication button
 
 ```typescript
 const buttonWrapper = document.querySelector('#buttonWrapper');
-StellarWalletsKit.createButton(buttonWrapper);
+WikialisaWalletsKit.createButton(buttonWrapper);
 ```
 
 ### Sign a transaction
 
 ```typescript
-const {address} = await StellarWalletsKit.getAddress();
+const {address} = await WikialisaWalletsKit.getAddress();
 
-const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
+const {signedTxXdr} = await WikialisaWalletsKit.signTransaction(tx.toXdr(), {
   networkPassphrase: Networks.PUBLIC,
   address,
 });
@@ -68,7 +68,7 @@ const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
 console.log("Signed Transaction:", signedTxXdr);
 ```
 
-And that's it! you just added support to all Stellar wallets and signed a transaction that is ready to go to the public
+And that's it! you just added support to all Wikialisa wallets and signed a transaction that is ready to go to the public
 network with just a few lines of code 🙌
 
 You need something more complex? Maybe listening to updates from the kit or manually handling the connection yourself?

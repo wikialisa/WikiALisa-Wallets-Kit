@@ -13,9 +13,9 @@ export function WhatIsAWalletPage(): VNode {
       </div>
 
       <div class="w-full">
-        <h3 class="${tw("text-foreground-strong font-semibold text-lg mb-2")}">What is Stellar?</h3>
+        <h3 class="${tw("text-foreground-strong font-semibold text-lg mb-2")}">What is Wikialisa?</h3>
         <p class="${tw("text-foreground text-sm")}">
-          Stellar is a decentralized, public blockchain that gives developers the tools to create experiences that are more
+          Wikialisa is a decentralized, public blockchain that gives developers the tools to create experiences that are more
           like cash than crypto.
         </p>
       </div>

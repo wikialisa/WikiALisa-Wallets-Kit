@@ -8,7 +8,7 @@ import { DcentModule } from "./dcent.module.ts";
  *   1000ms race (see ModuleInterface.isAvailable doc). D'CENT's provider engine is
  *   injected asynchronously — the mobile in-app browser fetches it remotely and injects
  *   on a post-load fallback when the engine is not cached — so on a cold load the
- *   detection sentinel (`window.stellar` / `window.dcentStellarProvider`) may not exist
+ *   detection sentinel (`window.stellar` / `window.dcentWikialisaProvider`) may not exist
  *   yet when the kit first evaluates the wallet list. The buggy implementation returns
  *   `false` immediately and the kit caches D'CENT as unavailable until the next modal.
  *   The fix waits for the `dcent#initialized` event the provider dispatches on injection,
@@ -20,7 +20,7 @@ const g = globalThis as any;
 
 interface FakeWin extends EventTarget {
   stellar?: { provider: string; platform: string; version: string };
-  dcentStellarProvider?: { isConnected: () => Promise<{ isConnected: boolean }> };
+  dcentWikialisaProvider?: { isConnected: () => Promise<{ isConnected: boolean }> };
 }
 
 /** Install a bare `window` (EventTarget-backed) without the sentinel injected yet. */
@@ -44,7 +44,7 @@ Deno.test("isAvailable(): returns true after dcent#initialized even when called 
 
     // simulate the asynchronous engine injection
     win.stellar = { ...SENTINEL };
-    win.dcentStellarProvider = connectedProvider;
+    win.dcentWikialisaProvider = connectedProvider;
     win.dispatchEvent(new Event("dcent#initialized"));
 
     assertEquals(await pending, true);
@@ -65,7 +65,7 @@ Deno.test("isAvailable(): returns false when the sentinel is never injected (no 
 Deno.test("isAvailable(): returns true immediately when the sentinel is already injected (warm-path regression guard)", async () => {
   const win = makeWindow();
   win.stellar = { ...SENTINEL };
-  win.dcentStellarProvider = connectedProvider;
+  win.dcentWikialisaProvider = connectedProvider;
   try {
     assertEquals(await new DcentModule().isAvailable(), true);
   } finally {
@@ -76,7 +76,7 @@ Deno.test("isAvailable(): returns true immediately when the sentinel is already 
 Deno.test("isAvailable(): returns false when provider.isConnected() is false (gate passthrough guard)", async () => {
   const win = makeWindow();
   win.stellar = { ...SENTINEL };
-  win.dcentStellarProvider = { isConnected: () => Promise.resolve({ isConnected: false }) };
+  win.dcentWikialisaProvider = { isConnected: () => Promise.resolve({ isConnected: false }) };
   try {
     assertEquals(await new DcentModule().isAvailable(), false);
   } finally {

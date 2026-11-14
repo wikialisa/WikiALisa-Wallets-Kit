@@ -20,25 +20,25 @@ npx jsr add @wikialisa-master/WikiALisa-Wallets-Kit
 ### Start the kit
 
 ```typescript
-import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
-StellarWalletsKit.init({modules: defaultModules()});
+WikialisaWalletsKit.init({modules: defaultModules()});
 ```
 
 ### Create the authentication button
 
 ```typescript
 const buttonWrapper = document.querySelector('#buttonWrapper');
-StellarWalletsKit.createButton(buttonWrapper);
+WikialisaWalletsKit.createButton(buttonWrapper);
 ```
 
 ### Sign a transaction
 
 ```typescript
-const {address} = await StellarWalletsKit.getAddress();
+const {address} = await WikialisaWalletsKit.getAddress();
 
-const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXDR(), {
+const {signedTxXdr} = await WikialisaWalletsKit.signTransaction(tx.toXDR(), {
   networkPassphrase: Networks.PUBLIC,
   address,
 });

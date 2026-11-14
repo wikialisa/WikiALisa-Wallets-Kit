@@ -5,7 +5,7 @@ import {
   KitEventType,
   SwkAppDarkTheme,
 } from "@creit.tech/WikiALisa-Wallets-Kit/types";
-import { StellarWalletsKit } from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
 import {
   activeAddress,
   activeModule,
@@ -23,7 +23,7 @@ import {
   TransactionBuilder,
 } from "@stellar/stellar-sdk";
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: {
     ...SwkAppDarkTheme,
     primary: "#1a1a1a",
@@ -37,15 +37,15 @@ StellarWalletsKit.init({
     ...defaultModules(),
     new LedgerModule(),
     new TrezorModule({
-      appName: "Stellar Wallets Kit",
+      appName: "Wikialisa Wallets Kit",
       appUrl: "http://localhost:5173",
       email: "test@email.com",
     }),
     new WalletConnectModule({
       projectId: "4e0b84f6ba6bedf7c7f041d919a9f039",
       metadata: {
-        name: "Stellar Wallets Kit",
-        description: "Add support to all Stellar Wallets with a single library",
+        name: "Wikialisa Wallets Kit",
+        description: "Add support to all Wikialisa Wallets with a single library",
         icons: [],
         url: "http://localhost:5173/",
       },
@@ -64,25 +64,25 @@ export class App extends Component<any, any> {
      * IMPORTANT: In this example we are not destroying these subscriptions,
      * in your app you should do it when components are unmount.
      */
-    StellarWalletsKit.on(KitEventType.STATE_UPDATED, (event) => {
+    WikialisaWalletsKit.on(KitEventType.STATE_UPDATED, (event) => {
       console.log(`Address updated:`, event.payload.address);
       this.setState({ address: event.payload.address });
     });
-    StellarWalletsKit.on(KitEventType.WALLET_SELECTED, (event) => {
+    WikialisaWalletsKit.on(KitEventType.WALLET_SELECTED, (event) => {
       console.log(`Wallet ID:`, event.payload.id);
       this.setState({ moduleId: event.payload.id });
     });
-    StellarWalletsKit.on(KitEventType.DISCONNECT, () => {
+    WikialisaWalletsKit.on(KitEventType.DISCONNECT, () => {
       this.setState({ address: undefined, productName: undefined });
     });
-    StellarWalletsKit.createButton(document.querySelector("#button")!, {
+    WikialisaWalletsKit.createButton(document.querySelector("#button")!, {
       mode: ButtonMode.free,
     });
   }
 
   async authModal(): Promise<void> {
     try {
-      const { address } = await StellarWalletsKit.authModal();
+      const { address } = await WikialisaWalletsKit.authModal();
       console.log(`Address fetched:`, address);
     } catch (e) {
       console.error(e);
@@ -90,12 +90,12 @@ export class App extends Component<any, any> {
   }
 
   async disconnect(): Promise<void> {
-    StellarWalletsKit.disconnect();
+    WikialisaWalletsKit.disconnect();
   }
 
   async signTransaction(): Promise<void> {
-    const { address } = await StellarWalletsKit.getAddress();
-    console.log("StellarWalletsKit::getAddress", address);
+    const { address } = await WikialisaWalletsKit.getAddress();
+    console.log("WikialisaWalletsKit::getAddress", address);
     const tx = new TransactionBuilder(
       new Account(
         "GD47IF5ARQLIVXUAX6EFN7TELAU6DUYQHPM7DNNLZ7VSR5TQSW6LQV74",
@@ -117,7 +117,7 @@ export class App extends Component<any, any> {
 
     console.log(tx.toXdr());
 
-    const { signedTxXdr } = await StellarWalletsKit.signTransaction(
+    const { signedTxXdr } = await WikialisaWalletsKit.signTransaction(
       tx.toXdr(),
       {
         networkPassphrase: Networks.PUBLIC,
@@ -129,11 +129,11 @@ export class App extends Component<any, any> {
   }
 
   async signAuthEntry(): Promise<void> {
-    const { address } = await StellarWalletsKit.getAddress();
+    const { address } = await WikialisaWalletsKit.getAddress();
     const xdr =
       "AAAACXrDOZdUTjF10ma9AiQ5sizbFlCMARY/JuXLKj4QRal5Ueb3t2qeufIDkl6TAAAAAAAAAAHD5Dhm6FraoWtNw3xmsftfw43aav9gLsi5kDYD1ccr/gAAAApzdGFydF9nYW1lAAAAAAAFAAAAAy2DQRwAAAASAAAAAAAAAACO+drsns+C8ivJ7BbEvGPuuaf+RI7JYRYQh3tTDoG6yAAAABIAAAAAAAAAADzwlU9pvQCCZwaS876OkOohieXRjEidV8RoVpxgVhODAAAACgAAAAAAAAAAAAAAAAAPQkAAAAAKAAAAAAAAAAAAAAAAAA9CQAAAAAEAAAAAAAAAAQ711IO2j2xojpimQQ1dzE4A9Kskd2MeHXPKwLGFTKYYAAAACnN0YXJ0X2dhbWUAAAAAAAYAAAASAAAAAcPkOGboWtqha03DfGax+1/Djdpq/2AuyLmQNgPVxyv+AAAAAy2DQRwAAAASAAAAAAAAAACO+drsns+C8ivJ7BbEvGPuuaf+RI7JYRYQh3tTDoG6yAAAABIAAAAAAAAAADzwlU9pvQCCZwaS876OkOohieXRjEidV8RoVpxgVhODAAAACgAAAAAAAAAAAAAAAAAPQkAAAAAKAAAAAAAAAAAAAAAAAA9CQAAAAAA=";
 
-    const { signedAuthEntry } = await StellarWalletsKit.signAuthEntry(xdr, {
+    const { signedAuthEntry } = await WikialisaWalletsKit.signAuthEntry(xdr, {
       networkPassphrase: Networks.PUBLIC,
       address,
     });
@@ -164,7 +164,7 @@ export class App extends Component<any, any> {
                 Sign auth Entry
               </button>
 
-              <button onClick={() => StellarWalletsKit.profileModal()}>
+              <button onClick={() => WikialisaWalletsKit.profileModal()}>
                 Profile Modal
               </button>
             </div>

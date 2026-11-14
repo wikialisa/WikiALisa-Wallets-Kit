@@ -1,5 +1,5 @@
 import {SwkAppDarkTheme} from "@creit.tech/WikiALisa-Wallets-Kit/types";
-import {StellarWalletsKit} from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
+import {WikialisaWalletsKit} from "@creit.tech/WikiALisa-Wallets-Kit/sdk";
 import {
     activeAddress,
     activeModule,
@@ -22,7 +22,7 @@ import logo from './logo.svg';
 import './App.css';
 import {useState} from 'react';
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
     theme: SwkAppDarkTheme,
     modules: [
         new AlbedoModule(),
@@ -40,7 +40,7 @@ function App() {
 
     async function authModal() {
         try {
-            const {address} = await StellarWalletsKit.authModal();
+            const {address} = await WikialisaWalletsKit.authModal();
             console.log(`Address fetched: ${address}`);
             setSelectedAddress(address);
             setModuleName(activeModule.value.productName);
@@ -50,14 +50,14 @@ function App() {
     }
 
     async function disconnect() {
-        StellarWalletsKit.disconnect();
+        WikialisaWalletsKit.disconnect();
         setSelectedAddress(undefined);
         setModuleName(undefined);
     }
 
     async function signTransaction() {
-        const {address} = await StellarWalletsKit.getAddress();
-        console.log("StellarWalletsKit::getAddress", address);
+        const {address} = await WikialisaWalletsKit.getAddress();
+        console.log("WikialisaWalletsKit::getAddress", address);
         const tx = new TransactionBuilder(new Account(address, "-1"), {
             networkPassphrase: Networks.PUBLIC,
             fee: "0",
@@ -71,7 +71,7 @@ function App() {
             )
             .build();
 
-        const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
+        const {signedTxXdr} = await WikialisaWalletsKit.signTransaction(tx.toXdr(), {
             networkPassphrase: Networks.PUBLIC,
             address,
         });

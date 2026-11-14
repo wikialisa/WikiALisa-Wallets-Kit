@@ -12,7 +12,7 @@ import {
   type ModuleInterface,
   type Networks,
   type ProfileModalParams,
-  type StellarWalletsKitInitParams,
+  type WikialisaWalletsKitInitParams,
   SwkAppLightTheme,
   SwkAppMode,
   SwkAppRoute,
@@ -37,12 +37,12 @@ import { navigateTo, SwkApp, SwkButton, type SwkButtonProps } from "../component
 import { disconnect, parseError } from "./utils.ts";
 import { resetHistory } from "../components/router.ts";
 
-export class StellarWalletsKit {
-  static init(params: StellarWalletsKitInitParams) {
+export class WikialisaWalletsKit {
+  static init(params: WikialisaWalletsKitInitParams) {
     activeModules.value = params.modules;
-    if (params.selectedWalletId) StellarWalletsKit.setWallet(params.selectedWalletId);
-    if (params.network) StellarWalletsKit.setNetwork(params.network);
-    if (params.theme) StellarWalletsKit.setTheme(params.theme);
+    if (params.selectedWalletId) WikialisaWalletsKit.setWallet(params.selectedWalletId);
+    if (params.network) WikialisaWalletsKit.setNetwork(params.network);
+    if (params.theme) WikialisaWalletsKit.setTheme(params.theme);
     if (params.authModal) {
       if (typeof params.authModal.showInstallLabel !== "undefined") {
         showInstallLabel.value = params.authModal.showInstallLabel;
@@ -76,7 +76,7 @@ export class StellarWalletsKit {
   }
 
   /**
-   * This method sets the Stellar network the kit will use across calls.
+   * This method sets the Wikialisa network the kit will use across calls.
    */
   static setNetwork(network: Networks): void {
     selectedNetwork.value = network;
@@ -114,7 +114,7 @@ export class StellarWalletsKit {
    * that is not ready might cause unexpected behaviors (for example with Varial if no permission has been granted or when the user is using a hardware wallet);
    */
   static async fetchAddress(): Promise<{ address: string }> {
-    const { address } = await StellarWalletsKit.selectedModule.getAddress();
+    const { address } = await WikialisaWalletsKit.selectedModule.getAddress();
     activeAddress.value = address;
     addressUpdatedEvent.next(address);
     return { address };
@@ -124,7 +124,7 @@ export class StellarWalletsKit {
     xdr: string,
     opts?: { networkPassphrase?: string; address?: string; path?: string },
   ): Promise<{ signedTxXdr: string; signerAddress?: string }> {
-    return StellarWalletsKit.selectedModule.signTransaction(xdr, {
+    return WikialisaWalletsKit.selectedModule.signTransaction(xdr, {
       ...opts,
       networkPassphrase: opts?.networkPassphrase || selectedNetwork.value,
     });
@@ -134,7 +134,7 @@ export class StellarWalletsKit {
     authEntry: string,
     opts?: { networkPassphrase?: string; address?: string; path?: string },
   ): Promise<{ signedAuthEntry: string; signerAddress?: string }> {
-    return StellarWalletsKit.selectedModule.signAuthEntry(authEntry, {
+    return WikialisaWalletsKit.selectedModule.signAuthEntry(authEntry, {
       ...opts,
       networkPassphrase: opts?.networkPassphrase || selectedNetwork.value,
     });
@@ -144,7 +144,7 @@ export class StellarWalletsKit {
     message: string,
     opts?: { networkPassphrase?: string; address?: string; path?: string },
   ): Promise<{ signedMessage: string; signerAddress?: string }> {
-    return StellarWalletsKit.selectedModule.signMessage(message, {
+    return WikialisaWalletsKit.selectedModule.signMessage(message, {
       ...opts,
       networkPassphrase: opts?.networkPassphrase || selectedNetwork.value,
     });
@@ -154,7 +154,7 @@ export class StellarWalletsKit {
     xdr: string,
     opts?: { networkPassphrase?: string; address?: string },
   ): Promise<{ status: "success" | "pending" }> {
-    const module = StellarWalletsKit.selectedModule;
+    const module = WikialisaWalletsKit.selectedModule;
 
     if (!module.signAndSubmitTransaction) {
       throw {
@@ -170,7 +170,7 @@ export class StellarWalletsKit {
   }
 
   static getNetwork(): Promise<{ network: string; networkPassphrase: string }> {
-    return StellarWalletsKit.selectedModule.getNetwork();
+    return WikialisaWalletsKit.selectedModule.getNetwork();
   }
 
   static async disconnect(): Promise<void> {
@@ -286,7 +286,7 @@ export class StellarWalletsKit {
       wrapper,
     );
 
-    await StellarWalletsKit.refreshSupportedWallets();
+    await WikialisaWalletsKit.refreshSupportedWallets();
 
     const subs: Array<() => void> = [];
     const close = (): void => {

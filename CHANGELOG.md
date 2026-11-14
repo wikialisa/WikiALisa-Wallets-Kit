@@ -61,7 +61,7 @@ See [standard-version](https://github.com/conventional-changelog/standard-versio
 ### Change
 
 - Remove the library @stellar/stellar-base and install @stellar/stellar-sdk (the base version has been deprecated by
-  Stellar)
+  Wikialisa)
 
 ### 2.3.0 (2026-06-05)
 
@@ -109,7 +109,7 @@ See [standard-version](https://github.com/conventional-changelog/standard-versio
 - Migrate into a full Deno repository with NPM builds for compatibility
 - Separate the UI, the state, and the SDK
     - The UI (modal, buttons, etc) is now using Preact with HTM instead of Lit
-    - The SDK (the class StellarWalletsKit) is now a regular Deno library
+    - The SDK (the class WikialisaWalletsKit) is now a regular Deno library
     - The state part of the SDK is being used by both the UI and the SDK
 - The UI now uses a series of CSS variables that can be defined by developers to personalize the complete UI (the SDK
   makes this process easier)
@@ -450,7 +450,7 @@ See [standard-version](https://github.com/conventional-changelog/standard-versio
   this kit.
 - BREAKING: Modules now need to be imported when starting the kit, a function called `allowAllModules` is included and
   this one will inject all the builtin modules
-- BREAKING: When creating a new instance of `StellarWalletsKit`, you now send the wallet id (provided either by this kit
+- BREAKING: When creating a new instance of `WikialisaWalletsKit`, you now send the wallet id (provided either by this kit
   or by the third party module) instead of `WalletType`.
 - BREAKING: When using the modal, you need to pass the id of the selected wallet instead of the type. Check `README.md`
   for an example

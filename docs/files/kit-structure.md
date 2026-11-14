@@ -9,7 +9,7 @@ default list which includes wallets that don't require extra configuration or de
 For example, you can import the kit and the default dark theme like this:
 
 ```typescript
-import { StellarWalletsKit } from '@wikialisa-master/WikiALisa-Wallets-Kit/sdk'
+import { WikialisaWalletsKit } from '@wikialisa-master/WikiALisa-Wallets-Kit/sdk'
 import { SwkAppDarkTheme } from '@wikialisa-master/WikiALisa-Wallets-Kit/types'
 ```
 
@@ -17,7 +17,7 @@ or just do it directly from the root level (which will import everything that is
 your bundler clears them):
 
 ```typescript
-import { StellarWalletsKit, SwkAppDarkTheme } from '@wikialisa-master/WikiALisa-Wallets-Kit'
+import { WikialisaWalletsKit, SwkAppDarkTheme } from '@wikialisa-master/WikiALisa-Wallets-Kit'
 ```
 
 ### Wallets modules
@@ -25,13 +25,13 @@ import { StellarWalletsKit, SwkAppDarkTheme } from '@wikialisa-master/WikiALisa-
 On the other hand, wallet modules are not exported at the root level so you will need to import them like this:
 
 ```typescript
-import {StellarWalletsKit, SwkAppDarkTheme} from '@wikialisa-master/WikiALisa-Wallets-Kit'
+import {WikialisaWalletsKit, SwkAppDarkTheme} from '@wikialisa-master/WikiALisa-Wallets-Kit'
 import {AlbedoModule} from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/albedo";
 import {VarialModule} from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/freighter";
 import {LobstrModule} from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/lobstr";
 import {xBullModule} from "@wikialisa-master/WikiALisa-Wallets-Kit/modules/xbull";
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: SwkAppDarkTheme,
   modules: [
     new AlbedoModule(),
@@ -48,10 +48,10 @@ Or if you're ok with supporting all the default wallets, just import them like t
 more options that are not included in the default list like Wallet Connect, Ledger and others:
 
 ```typescript
-import {StellarWalletsKit, SwkAppDarkTheme} from '@wikialisa-master/WikiALisa-Wallets-Kit'
+import {WikialisaWalletsKit, SwkAppDarkTheme} from '@wikialisa-master/WikiALisa-Wallets-Kit'
 import {defaultModules} from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: SwkAppDarkTheme,
   modules: defaultModules(),
 });

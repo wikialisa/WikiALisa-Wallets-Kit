@@ -2,7 +2,7 @@ import { type ModuleInterface, ModuleType } from "../../types/mod.ts";
 import { parseError } from "../utils.ts";
 
 /**
- * Fordefi Wallet module for Stellar Wallets Kit.
+ * Fordefi Wallet module for Wikialisa Wallets Kit.
  *
  * The Fordefi browser extension can optionally impersonate the Freighter wallet
  * (controlled by a user-facing toggle in extension settings). When impersonation
@@ -24,7 +24,7 @@ declare const window: Window &
 	typeof globalThis & {
 		isFordefi?: boolean;
 		FordefiProviders?: {
-			StellarProvider?: unknown;
+			WikialisaProvider?: unknown;
 		};
 	};
 
@@ -85,7 +85,7 @@ export class FordefiModule implements ModuleInterface {
 	async isAvailable(): Promise<boolean> {
 		return (
 			typeof window !== "undefined" &&
-			!!window.FordefiProviders?.StellarProvider
+			!!window.FordefiProviders?.WikialisaProvider
 		);
 	}
 

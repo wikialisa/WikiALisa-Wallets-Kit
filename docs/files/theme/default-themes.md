@@ -5,7 +5,7 @@ The kit includes two default themes one for `light` and one for `dark` styles an
 ```typescript
 import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
-StellarWalletsKit.init({theme: SwkAppDarkTheme});
+WikialisaWalletsKit.init({theme: SwkAppDarkTheme});
 ```
 
 > If no theme is provided, the kit will use the default light theme.

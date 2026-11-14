@@ -10,11 +10,11 @@ site uses SSR or has a pre-rendering process, then skip starting the kit until y
 know, you can start it. Do it like this:
 
 ```typescript
-import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 import { defaultModules } from '@wikialisa-master/WikiALisa-Wallets-Kit/modules/utils';
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: SwkAppDarkTheme,
   modules: defaultModules(),
 });
@@ -33,7 +33,7 @@ wallets:
 // First fetch the html element that will contain it
 const buttonWrapper = document.querySelector('#buttonWrapper');
 // Then insert the button
-StellarWalletsKit.createButton(buttonWrapper);
+WikialisaWalletsKit.createButton(buttonWrapper);
 ```
 
 This will insert a new component to the website and this component will listen to events from the user and the kit. It
@@ -46,7 +46,7 @@ its appearance like this:
 ```typescript
 import { ButtonMode } from '@wikialisa-master/WikiALisa-Wallets-Kit/components';
 
-StellarWalletsKit.createButton(buttonWrapper, {
+WikialisaWalletsKit.createButton(buttonWrapper, {
   mode: ButtonMode.free,
   classes: 'btn btn-primary'
 });
@@ -61,11 +61,11 @@ website's logic
 ```typescript
 import { KitEventType } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
-const sub1 = StellarWalletsKit.on(KitEventType.STATE_UPDATED, event => {
+const sub1 = WikialisaWalletsKit.on(KitEventType.STATE_UPDATED, event => {
   // We update our website's logic with the new address: event.payload.address
 });
 
-const sub2 = StellarWalletsKit.on(KitEventType.DISCONNECT, () => {
+const sub2 = WikialisaWalletsKit.on(KitEventType.DISCONNECT, () => {
   // We log out the user
 });
 ```
@@ -80,10 +80,10 @@ with your website's logic. For example, if the user needs to sign a transaction,
 
 ```typescript
  // We fetch the active address just to be sure we have the last one available
-const {address} = await StellarWalletsKit.getAddress();
+const {address} = await WikialisaWalletsKit.getAddress();
 
 // We request the signature for the transaction `tx` using the PUBLIC network and the address we just fetched.
-const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
+const {signedTxXdr} = await WikialisaWalletsKit.signTransaction(tx.toXdr(), {
   networkPassphrase: Networks.PUBLIC,
   address,
 });

@@ -1,7 +1,7 @@
 export enum LocalStorageKeys {
-  usedWalletsIds = "@StellarWalletsKit/usedWalletsIds",
-  activeAddress = "@StellarWalletsKit/activeAddress",
-  selectedModuleId = "@StellarWalletsKit/selectedModuleId",
-  hardwareWalletPaths = "@StellarWalletsKit/hardwareWalletPaths",
-  wcSessionPaths = "@StellarWalletsKit/wcSessionPaths",
+  usedWalletsIds = "@WikialisaWalletsKit/usedWalletsIds",
+  activeAddress = "@WikialisaWalletsKit/activeAddress",
+  selectedModuleId = "@WikialisaWalletsKit/selectedModuleId",
+  hardwareWalletPaths = "@WikialisaWalletsKit/hardwareWalletPaths",
+  wcSessionPaths = "@WikialisaWalletsKit/wcSessionPaths",
 }

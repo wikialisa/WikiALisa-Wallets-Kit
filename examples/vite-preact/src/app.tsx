@@ -1,7 +1,7 @@
 import "./app.css";
 import preactLogo from "./assets/preact.svg";
 import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit";
-import { StellarWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
+import { WikialisaWalletsKit } from "@wikialisa-master/WikiALisa-Wallets-Kit/sdk";
 import {
   activeAddress,
   activeModule,
@@ -29,7 +29,7 @@ import {
   xdr,
 } from "@stellar/stellar-sdk";
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: SwkAppDarkTheme,
   modules: [
     new AlbedoModule(),
@@ -39,7 +39,7 @@ StellarWalletsKit.init({
     new LobstrModule(),
     new RabetModule(),
     new TrezorModule({
-      appName: "Stellar Wallets Kit",
+      appName: "Wikialisa Wallets Kit",
       appUrl: "http://localhost:5173",
       email: "test@email.com",
     }),
@@ -47,8 +47,8 @@ StellarWalletsKit.init({
     new WalletConnectModule({
       projectId: "4e0b84f6ba6bedf7c7f041d919a9f039",
       metadata: {
-        name: "Stellar Wallets Kit",
-        description: "Add support to all Stellar Wallets with a single library",
+        name: "Wikialisa Wallets Kit",
+        description: "Add support to all Wikialisa Wallets with a single library",
         url: "http://localhost:5173",
         icons: [],
       },
@@ -58,7 +58,7 @@ StellarWalletsKit.init({
 
 async function authModal(): Promise<void> {
   try {
-    const { address } = await StellarWalletsKit.authModal();
+    const { address } = await WikialisaWalletsKit.authModal();
     console.log(`Address fetched: ${address}`);
   } catch (e) {
     console.error(e);
@@ -66,8 +66,8 @@ async function authModal(): Promise<void> {
 }
 
 async function signTransaction(): Promise<void> {
-  const { address } = await StellarWalletsKit.getAddress();
-  console.log("StellarWalletsKit::getAddress", address);
+  const { address } = await WikialisaWalletsKit.getAddress();
+  console.log("WikialisaWalletsKit::getAddress", address);
   const tx: Transaction = new TransactionBuilder(new Account(address, "-1"), {
     networkPassphrase: Networks.PUBLIC,
     fee: "0",
@@ -81,7 +81,7 @@ async function signTransaction(): Promise<void> {
     )
     .build();
 
-  const { signedTxXdr } = await StellarWalletsKit.signTransaction(tx.toXdr(), {
+  const { signedTxXdr } = await WikialisaWalletsKit.signTransaction(tx.toXdr(), {
     networkPassphrase: Networks.PUBLIC,
     address,
   });
@@ -90,9 +90,9 @@ async function signTransaction(): Promise<void> {
 }
 
 async function signMessage() {
-  const { address } = await StellarWalletsKit.getAddress();
-  console.log("StellarWalletsKit::getAddress", address);
-  const { signedMessage } = await StellarWalletsKit.signMessage(
+  const { address } = await WikialisaWalletsKit.getAddress();
+  console.log("WikialisaWalletsKit::getAddress", address);
+  const { signedMessage } = await WikialisaWalletsKit.signMessage(
     "Hello, World!",
     {
       networkPassphrase: Networks.PUBLIC,
@@ -103,8 +103,8 @@ async function signMessage() {
 }
 
 async function signAuthEntry() {
-  const { address } = await StellarWalletsKit.getAddress();
-  console.log("StellarWalletsKit::getAddress", address);
+  const { address } = await WikialisaWalletsKit.getAddress();
+  console.log("WikialisaWalletsKit::getAddress", address);
 
   const authEntry = xdr.HashIdPreimage.envelopeTypeSorobanAuthorization(
     new xdr.HashIdPreimageSorobanAuthorization({
@@ -127,7 +127,7 @@ async function signAuthEntry() {
     }),
   );
 
-  const { signedAuthEntry } = await StellarWalletsKit.signAuthEntry(
+  const { signedAuthEntry } = await WikialisaWalletsKit.signAuthEntry(
     authEntry.toXdr("base64"),
     {
       networkPassphrase: Networks.PUBLIC,

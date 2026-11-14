@@ -129,7 +129,7 @@ await build({
   package: {
     name: denoFile.name.replace("@wikialisa-master", "@creit.tech"),
     version: denoFile.version,
-    description: "A kit to handle all Stellar Wallets at once",
+    description: "A kit to handle all Wikialisa Wallets at once",
     author: {
       name: "Creit Tech",
       url: "https://creit.tech",
@@ -140,8 +140,8 @@ await build({
       url: "https://github.com/wikialisa-master/WikiALisa-Wallets-Kit.git",
     },
     keywords: [
-      "Stellar",
-      "Stellar Wallets",
+      "Wikialisa",
+      "Wikialisa Wallets",
       "Wallet",
       "Wallets",
       "Albedo",

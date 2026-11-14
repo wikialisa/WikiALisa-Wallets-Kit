@@ -8,12 +8,12 @@ import { parseError } from "../utils.ts";
  *  - the D'CENT mobile in-app dApp browser (`window.stellar.platform === "mobile"`)
  *
  * Both clients inject a frozen detection sentinel `window.stellar` (with
- * `provider === "dcent"`) and the provider instance as `window.dcentStellarProvider`.
+ * `provider === "dcent"`) and the provider instance as `window.dcentWikialisaProvider`.
  * The provider follows a "never-throw" convention: its methods resolve with a
  * `{ ..., error? }` shape instead of throwing, so this module unwraps `error`
  * into a rejected promise to match the kit's throw-on-failure contract.
  *
- * The module talks to `window.dcentStellarProvider` directly (rather than through
+ * The module talks to `window.dcentWikialisaProvider` directly (rather than through
  * `@stellar/freighter-api`) so it always targets D'CENT specifically — even when
  * the real Freighter extension is also installed — and stays dependency-free.
  */
@@ -30,7 +30,7 @@ interface DcentSignOpts {
   accountToSign?: string;
 }
 
-interface DcentStellarProvider {
+interface DcentWikialisaProvider {
   isConnected(): Promise<{ isConnected: boolean }>;
   requestAccess(): Promise<{ address: string; publicKey?: string; error?: DcentApiError }>;
   getAddress(): Promise<{ address: string; error?: DcentApiError }>;
@@ -58,7 +58,7 @@ declare const window:
       platform: string;
       version: string;
     };
-    dcentStellarProvider?: DcentStellarProvider;
+    dcentWikialisaProvider?: DcentWikialisaProvider;
   };
 
 export const DCENT_ID: string = "dcent";
@@ -80,10 +80,10 @@ export class DcentModule implements ModuleInterface {
   productIcon: string =
     "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAzMiAzMiIgd2lkdGg9IjMyIiBoZWlnaHQ9IjMyIj4KICA8ZGVmcz4KICAgIDxsaW5lYXJHcmFkaWVudCBpZD0iYmciIHgxPSIwIiB5MT0iMCIgeDI9IjEiIHkyPSIxIj4KICAgICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzIxMjIyNSIvPgogICAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMxYjFjMWUiLz4KICAgIDwvbGluZWFyR3JhZGllbnQ+CiAgPC9kZWZzPgoKICA8IS0tIERhcmsgYmFja2dyb3VuZCAtLT4KICA8cmVjdCB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHJ4PSI3IiBmaWxsPSIjMWIxYzFlIi8+CgogIDwhLS0KICAgIEQnQ0VOVCBsb2dvIHBhdGhzIOKAlCBvcmlnaW5hbCB2aWV3Qm94OiAwIDAgNjQgNzIKICAgIFNjYWxlOiAyMi82NCDiiYggMC4zNDM4LCBjZW50ZXJlZCBpbiAzMngzMjoKICAgICAgeCBvZmZzZXQgPSAoMzIgLSAyMikgLyAyID0gNQogICAgICB5IG9mZnNldCA9ICgzMiAtIDIyICogNzIvNjQpIC8gMiA9ICgzMiAtIDI0Ljc1KSAvIDIg4omIIDMuNjMKICAgIENvbG9ycyBmcm9tIGxpZ2h0LW1vZGUgdG9rZW5zIChzdGFuZGFsb25lIFNWRywgbm8gQ1NTIHZhcnMpOgogICAgICBtaW50ICA9ICMyN2M0YjggKGdyYXBoaWNfbG9nb19taW50KQogICAgICBncmV5MSA9ICNhNGE3YTkgKGdyYXBoaWNfbG9nb19ncmV5KQogICAgICBncmV5MiA9ICM2ZDZlNzEgKGdyYXBoaWNfbG9nb19ncmV5XzIpCiAgLS0+CiAgPGcgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoNSwgMy42Mykgc2NhbGUoMC4zNDM4KSI+CiAgICA8IS0tIFRvcC1yaWdodCBzbWFsbCBwaWVjZTogZ3JleTEgLS0+CiAgICA8cGF0aCBkPSJNMzIuODgyOCAxMy41OTgyTDM4LjIzNzYgMTAuNDk5OVYzLjA5ODMyTDMyLjg4MjggMFYxMy41OTgyWiIgZmlsbD0iI2E0YTdhOSIvPgogICAgPCEtLSBMYXJnZSBsZWZ0IGJvZHk6IEQnQ0VOVCBncmVlbiAtLT4KICAgIDxwYXRoIGQ9Ik0xMy4xNjE1IDQ1LjgwNjVWMjQuOTk5MkwzMS4xMDUyIDE0LjY0MVYwTDEuNDcxODQgMTcuMTQyQzEuMTk1OSAxNy4zMDI4IDAuOTY2NzE1IDE3LjUzMzIgMC44MDcxOTkgMTcuODEwNEMwLjY0NzY4MiAxOC4wODc1IDAuNTYzMzExIDE4LjQwMTYgMC41NjI1IDE4LjcyMTVWNTMuMTQ3M0wxMy4xNjE1IDQ1LjgwNjVaIiBmaWxsPSIjMGRiMjYzIi8+CiAgICA8IS0tIEJvdHRvbSB3aWRlIHNoYXBlOiBncmV5MiAtLT4KICAgIDxwYXRoIGQ9Ik00OS44NzcyIDQ3LjI3MzRMMzEuOTYzNCA1Ny42MzE2TDE0LjE2MTIgNDcuMzM0MkwxLjUxMTcyIDU0LjY1NDdMMzEuMTA0NiA3MS43NTYyQzMxLjM4MTQgNzEuOTE1NCAzMS42OTQ4IDcxLjk5OTEgMzIuMDEzOSA3MS45OTkyQzMyLjMzMzIgNzIuMDAwNSAzMi42NDcgNzEuOTE2NyAzMi45MjMzIDcxLjc1NjJMNjIuNTY2NiA1NC42MDQxTDQ5Ljg3NzIgNDcuMjczNFoiIGZpbGw9IiM2ZDZlNzEiLz4KICAgIDwhLS0gUmlnaHQgdGFsbCBzaGFwZTogZ3JleTEgLS0+CiAgICA8cGF0aCBkPSJNNjIuNTE0NiAxNy4xMzc5TDUwLjc2NDMgMTAuMzQzOFYxNy43NDUzTDM4LjE3NTggMjUuMDQ1Nkw1MC44MDQ5IDMyLjM0NTlWNDUuNjgwOUw2My40MzQzIDUzLjA0MTlWMTguNzE3NEM2My40MzIzIDE4LjM5NjQgNjMuMzQ2MSAxOC4wODE3IDYzLjE4NDkgMTcuODA0NEM2My4wMjM2IDE3LjUyNzMgNjIuNzkyNCAxNy4yOTc0IDYyLjUxNDYgMTcuMTM3OVoiIGZpbGw9IiNhNGE3YTkiLz4KICAgIDwhLS0gQ2VudGVyIGRpYW1vbmQ6IGdyZXkyIC0tPgogICAgPHBhdGggZD0iTTI1LjY5OTIgMzIuMjU4NkwyNS43MDkzIDQ2Ljc1OEwzNy45OTUxIDM5LjY1VjI1LjE0MDZMMjUuNjk5MiAzMi4yNTg2WiIgZmlsbD0iIzZkNmU3MSIvPgogIDwvZz4KPC9zdmc+Cg==";
 
-  private getProvider(): DcentStellarProvider {
-    const provider = window.dcentStellarProvider;
+  private getProvider(): DcentWikialisaProvider {
+    const provider = window.dcentWikialisaProvider;
     if (!provider) {
-      throw parseError({ code: -1, message: "D'CENT Stellar provider is not available" });
+      throw parseError({ code: -1, message: "D'CENT Wikialisa provider is not available" });
     }
     return provider;
   }
@@ -116,7 +116,7 @@ export class DcentModule implements ModuleInterface {
   }
 
   private isSentinelReady(): boolean {
-    return window.stellar?.provider === "dcent" && !!window.dcentStellarProvider;
+    return window.stellar?.provider === "dcent" && !!window.dcentWikialisaProvider;
   }
 
   private async connected(): Promise<boolean> {

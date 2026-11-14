@@ -1,7 +1,7 @@
 import type { SwkAppTheme } from "./components.ts";
 import type { ModuleInterface, Networks } from "./mod.ts";
 
-export interface StellarWalletsKitInitParams {
+export interface WikialisaWalletsKitInitParams {
   modules: ModuleInterface[];
   selectedWalletId?: string;
   network?: Networks;

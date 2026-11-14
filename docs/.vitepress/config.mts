@@ -5,8 +5,8 @@ export default defineConfig({
   base: process.env.VITEPRESS_BASE || '/',
   srcDir: "files",
 
-  title: "Stellar Wallets Kit",
-  description: "A kit to handle all Stellar Wallets at once",
+  title: "Wikialisa Wallets Kit",
+  description: "A kit to handle all Wikialisa Wallets at once",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     nav: [

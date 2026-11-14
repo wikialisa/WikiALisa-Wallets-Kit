@@ -4,7 +4,7 @@ If you need to request the user to sign a transaction, an auth entry or a messag
 methods. Call them like this:
 
 ```typescript
-const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
+const {signedTxXdr} = await WikialisaWalletsKit.signTransaction(tx.toXdr(), {
   networkPassphrase: Networks.PUBLIC,
   address: 'THE_STELLAR_ADDRESS',
 });
@@ -16,7 +16,7 @@ const {signedTxXdr} = await StellarWalletsKit.signTransaction(tx.toXdr(), {
 These are the current methods the kit support related to signatures:
 
 ```typescript
-interface StellarWalletsKit {
+interface WikialisaWalletsKit {
   signTransaction(
     xdr: string,
     opts?: { networkPassphrase?: string; address?: string; path?: string; },

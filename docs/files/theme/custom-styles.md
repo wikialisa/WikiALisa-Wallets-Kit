@@ -30,7 +30,7 @@ values you want to. Here is an example of how you could do it:
 ```typescript
 import { SwkAppDarkTheme } from "@wikialisa-master/WikiALisa-Wallets-Kit/types";
 
-StellarWalletsKit.init({
+WikialisaWalletsKit.init({
   theme: {
     ...SwkAppDarkTheme,
     primary: "#c19cfc",

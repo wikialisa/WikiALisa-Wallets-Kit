@@ -8,7 +8,7 @@ export function Footer(): VNode {
       <p class="${tw("text-xs text-foreground")}">
         Powered by
         <a target="_blank" href="https://stellarwalletskit.dev/" class="${tw("font-semibold underline ml-1")}">
-          Stellar Wallets Kit
+          Wikialisa Wallets Kit
         </a>
       </p>
     </footer>

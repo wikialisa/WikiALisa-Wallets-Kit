@@ -3,10 +3,10 @@ export * from "./sdk.ts";
 export * from "./storage.ts";
 
 export enum Networks {
-  PUBLIC = "Public Global Stellar Network ; September 2015",
+  PUBLIC = "Public Global Wikialisa Network ; September 2015",
   TESTNET = "Test SDF Network ; September 2015",
   FUTURENET = "Test SDF Future Network ; October 2022",
-  SANDBOX = "Local Sandbox Stellar Network ; September 2022",
+  SANDBOX = "Local Sandbox Wikialisa Network ; September 2022",
   STANDALONE = "Standalone Network ; February 2017",
 }
 
@@ -149,7 +149,7 @@ export interface ModuleInterface {
    *
    * @param xdr - A Transaction or a FeeBumpTransaction
    * @param opts - Options compatible with https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0043.md#signtransaction
-   * @param opts.networkPassphrase - The Stellar network to use when signing
+   * @param opts.networkPassphrase - The Wikialisa network to use when signing
    * @param opts.address - The public key of the account that should be used to sign
    * @param opts.path - This options is added for special cases like Hardware wallets
    *
@@ -169,7 +169,7 @@ export interface ModuleInterface {
    *
    * @param authEntry - An XDR string version of `HashIdPreimageSorobanAuthorization`
    * @param opts - Options compatible with https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0043.md#signauthentry
-   * @param opts.networkPassphrase - The Stellar network to use when signing
+   * @param opts.networkPassphrase - The Wikialisa network to use when signing
    * @param opts.address - The public key of the account that should be used to sign
    * @param opts.path - This options is added for special cases like Hardware wallets
    *
@@ -189,7 +189,7 @@ export interface ModuleInterface {
    *
    * @param message - An arbitrary string rather than a transaction or auth entry
    * @param opts - Options compatible with https://github.com/stellar/stellar-protocol/blob/master/ecosystem/sep-0043.md#signmessage
-   * @param opts.networkPassphrase - The Stellar network to use when signing
+   * @param opts.networkPassphrase - The Wikialisa network to use when signing
    * @param opts.address - The public key of the account that should be used to sign
    * @param opts.path - This options is added for special cases like Hardware wallets
    *
@@ -215,7 +215,7 @@ export interface ModuleInterface {
    *
    * @param xdr - A Transaction or a FeeBumpTransaction in XDR format
    * @param opts - Options for the signing operation
-   * @param opts.networkPassphrase - The Stellar network to use when signing
+   * @param opts.networkPassphrase - The Wikialisa network to use when signing
    * @param opts.address - The public key of the account that should be used to sign
    *
    * @return Promise<{ status: "success" | "pending" }> - "success" means the transaction

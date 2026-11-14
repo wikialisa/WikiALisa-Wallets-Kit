@@ -1,5 +1,5 @@
 /**
- * GHOSTSIG module for the Stellar Wallets Kit.
+ * GHOSTSIG module for the Wikialisa Wallets Kit.
  *
  * GHOSTSIG (https://ghostsig.dev) is a hosted wallet with no extension and no
  * stored private key: a passkey's PRF output is expanded into an ed25519 key
